@@ -1,7 +1,7 @@
 from telethon.sync import TelegramClient, events
 
-api_id = 0000000
-api_hash = 'hash'
+api_id = 6258636
+api_hash = '72e82ac4cfe8fe0df32860140fc8014d'
 done = 0
 total_cc_count = sum(1 for line in open('cc.txt'))
 
