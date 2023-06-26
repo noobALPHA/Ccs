@@ -60,7 +60,7 @@ async def my_event_handler(client, message):
         w.write(fullinfo + '\n')
     await client.send_photo(
         chat_id=SEND_ID,
-        photo='heart4youu.jpg',
+#        photo='heart4youu.jpg',
         caption=f"""
 ══════════════════════
                 тσχιᴄ ѕᴄяαρρєя    
