@@ -1,17 +1,10 @@
 import random
 import re
-
-
 def getUrl(string):
-      
-    # findall() has been used 
-    # with valid conditions for urls in string
     regex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
     url = re.findall(regex,string) 
     if not url: return None     
     return [x[0] for x in url]
-
-
 def getcards(text:str):
     text = text.replace('\n', ' ').replace('\r', '')
     card = re.findall(r"[0-9]+", text)
@@ -51,7 +44,6 @@ def getcards(text:str):
         return
     if (cc,mes,ano,cvv):
         return cc,mes,ano,cvv
-    
 def phone():
         first = str(random.randint(100, 999))
         second = str(random.randint(1, 888)).zfill(3)
@@ -59,8 +51,5 @@ def phone():
         while last in ['1111', '2222', '3333', '4444', '5555', '6666', '7777', '8888']:
             last = (str(random.randint(1, 9998)).zfill(4))
         return '{}{}{}'.format(first, second, last)
-
-
 from datetime import datetime
 import random
-
