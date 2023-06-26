@@ -5,6 +5,8 @@ import os, sys
 import re
 import requests
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from datetime import datetime
+current_time = datetime.now().strftime("Time: %a %b %d %H:%M:%S %Y")
 
 API_ID = 20393133
 API_HASH = 'c0b5c0973efd3a3f702695e2edf3b8b6'
@@ -69,6 +71,7 @@ async def my_event_handler(client, message):
 ━━━━━━━━━━━━━━━━━
 🥀 « 𝐶𝑜𝑚𝑚𝑢𝑛𝑖𝑡𝑦 ⌯「 @CRKSOO_CC ↯ 」
 🥀 « 𝑂𝑤𝑛𝑒𝑟 ⌯「 @Was_FaReS ↯ 」
+**{current_time}**
 """,
 )
 
