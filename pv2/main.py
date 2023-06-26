@@ -55,7 +55,7 @@ async def my_event_handler(client, message):
         w.write(fullinfo + '\n')
     await client.send_photo(
         chat_id=SEND_ID,
-        photo='scra.jpg',
+        photo='heart4youu.jpg',
         caption=f""">_「 𝑆𝑐𝑟𝑎𝑝𝑒𝑟 @Was_FaReS ↯  」 _<
 ━━━━━━━━━━━━━━━━━ 
 ꑭ < ʙɪɴ ⌯ {cc[:6]} | {bin_json['country_flag']}
