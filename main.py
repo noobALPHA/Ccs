@@ -16,7 +16,7 @@ from telethon.tl.types import PeerUser, PeerChat, PeerChannel
 
 API_ID = 20393133
 API_HASH = 'c0b5c0973efd3a3f702695e2edf3b8b6'
-SEND_ID = -1001718331864
+SEND_ID = -1001943074057
 client = TelegramClient('session', API_ID, API_HASH)
 ccs = []
 chats = [
