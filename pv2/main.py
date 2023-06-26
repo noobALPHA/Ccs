@@ -6,7 +6,10 @@ import re
 import requests
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from datetime import datetime
-current_time = datetime.now().strftime("%a %b %d %H:%M:%S %Y")
+import pytz
+
+ist_timezone = pytz.timezone('Asia/Kolkata')
+current_time = datetime.now(tz=ist_timezone).strftime("%a %b %d %H:%M:%S %Y")
 
 API_ID = 20393133
 API_HASH = 'c0b5c0973efd3a3f702695e2edf3b8b6'
@@ -60,7 +63,7 @@ async def my_event_handler(client, message):
         photo='heart4youu.jpg',
         caption=f"""
 ══════════════════════
-    тσχιᴄ ѕᴄяαρρєя    
+                тσχιᴄ ѕᴄяαρρєя    
 ══════════════════════
 
 **• ᴄᴀʀᴅ ⥁**
@@ -71,7 +74,7 @@ async def my_event_handler(client, message):
 **• ɪɴғᴏ ➻**  `{bin_json['type']}` 
 **• ᴛʏᴘᴇ ➻** `{bin_json['brand']}`
 **• ʙᴀɴᴋ ➻** `{bin_json['bank']}`
-**• ᴄᴏᴜɴᴛʀʏ ➻** `{bin_json['country_name']}` | {bin_json['country_flag']} ↯ 
+**• ᴄᴏᴜɴᴛʀʏ ➻** `{bin_json['country_name']}` | {bin_json['country_flag']} 
 
 **• ᴇxᴛʀᴀ ➻**
   ⤷ `{extra}xxxx|{mes}|{ano}|{cvv}` 
@@ -87,5 +90,4 @@ async def my_event_handler(client, message):
     await asyncio.sleep(15)
 
 
-client.start()
 client.run()
