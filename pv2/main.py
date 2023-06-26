@@ -8,9 +8,6 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from datetime import datetime
 import pytz
 
-ist_timezone = pytz.timezone('Asia/Kolkata')
-current_time = datetime.now(tz=ist_timezone).strftime("%a %b %d %H:%M:%S %Y")
-
 API_ID = 20393133
 API_HASH = 'c0b5c0973efd3a3f702695e2edf3b8b6'
 SEND_ID = -1001943074057
@@ -33,6 +30,10 @@ for x in temp_cards:
 
 @client.on_message(filters.chat(chats) & filters.text)
 async def my_event_handler(client, message):
+
+    ist_timezone = pytz.timezone('Asia/Kolkata')
+current_time = datetime.now(tz=ist_timezone).strftime("%a %b %d %H:%M:%S %Y")
+
     if message.reply_markup:
         text = message.reply_markup.stringify()
         urls = getUrl(text)
