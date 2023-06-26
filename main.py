@@ -88,7 +88,7 @@ async def my_event_handler(m):
         return
     ccs.append(cc)
     extra = cc[0:0 + 12]
-    bin = requests.get(f'https://bin-api-dragon.ga/bin/api/{cc[:6]}')
+    bin = requests.get(f'https://bins.antipublic.cc/bins/{cc[:6]}')
     if not bin:
         return
     bin_json = bin.json()
