@@ -70,6 +70,12 @@ async def my_event_handler(client, message):
 🥀 « 𝐶𝑜𝑚𝑚𝑢𝑛𝑖𝑡𝑦 ⌯「 @CRKSOO_CC ↯ 」
 🥀 « 𝑂𝑤𝑛𝑒𝑟 ⌯「 @Was_FaReS ↯ 」
 """,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [InlineKeyboardButton("Developer", url="https://t.me/Was_FaReS")],
+                [InlineKeyboardButton("Channel", url="https://t.me/CRKSOO_CC")],
+            ]
+        )
     )
 
 
