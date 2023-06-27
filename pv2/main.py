@@ -1,5 +1,6 @@
 from defs import getUrl, getcards, phone
 from pyrogram import Client, filters
+from button import add_button
 import asyncio
 import os, sys
 import re
@@ -85,6 +86,7 @@ current_time = datetime.now(tz=ist_timezone).strftime("%a %b %d %H:%M:%S %Y")
 **Time:** `{current_time}` (IST)
 """,
 )
+add_button(message)
 
 
 @client.on_message(filters.outgoing & filters.regex(r'.lives'))
