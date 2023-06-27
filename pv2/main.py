@@ -31,9 +31,18 @@ for x in temp_cards:
 
 @client.on_message(filters.chat(chats) & filters.text)
 async def my_event_handler(client, message):
-
     ist_timezone = pytz.timezone('Asia/Kolkata')
-current_time = datetime.now(tz=ist_timezone).strftime("%a %b %d %H:%M:%S %Y")
+    current_time = datetime.now(tz=ist_timezone).strftime("%a %b %d %H:%M:%S %Y")
+
+    if message.reply_markup:
+        text = message.reply_markup.stringify()
+        urls = getUrl(text)
+        if not urls:
+            return
+        text = requests.get(urls[0]).text
+    else:
+        text = message.text
+    ...
 
     if message.reply_markup:
         text = message.reply_markup.stringify()
